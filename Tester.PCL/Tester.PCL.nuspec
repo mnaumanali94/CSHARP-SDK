@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Tester.PCL
+This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/03/2016
+-->
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Tester.PCL</id>
+    <version>1.0</version>
+    <title>Tester.PCL</title>
+    <authors>APIMATIC 2.0</authors>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Testing various
+ api 
+features</description>
+    <summary />
+    <releaseNotes />
+    <copyright>Copyright 2016</copyright>
+    <language>en-US</language>
+        <dependencies>
+            <dependency id="Unirest-APIMATIC" version="1.0.1.23" />
+        </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\Tester.PCL.dll" target="lib\Tester.PCL.dll" />
+  </files>
+</package>

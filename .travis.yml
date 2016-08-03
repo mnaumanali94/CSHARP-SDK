@@ -1,0 +1,8 @@
+language: csharp
+solution: Tester.sln
+install:
+  - nuget restore Tester.sln
+  - nuget install NUnit.Runners -Version 3.2.1 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release Tester.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.2.1/tools/nunit3-console.exe ./Tester.Tests/bin/Release/Tester.Tests.dll
