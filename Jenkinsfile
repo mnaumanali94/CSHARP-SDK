@@ -9,5 +9,5 @@ node {
     stage 'Build'
         bat "MSBuild.exe /p:Configuration=Release \"Tester.sln\""
     stage 'Test'
-        bat "testrunner\\NUnit.ConsoleRunner.3.2.1\\tools\\nunit3-console.exe Tester.Tests.Tests\\bin\\Release\\ Tester.Tests .Tests.dll"            
+        bat "testrunner\\NUnit.ConsoleRunner.3.2.1\\tools\\nunit3-console.exe Tester.Tests\\bin\\Release\\ Tester.Tests.dll"            
      }
