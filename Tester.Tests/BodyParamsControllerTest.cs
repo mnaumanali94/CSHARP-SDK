@@ -26,7 +26,7 @@ namespace Tester.Tests
         /// <summary>
         /// Controller instance (for all tests)
         /// </summary>
-        private static BodyParamsController controller;
+        private static IBodyParamsController controller;
 
         /// <summary>
         /// Setup test class

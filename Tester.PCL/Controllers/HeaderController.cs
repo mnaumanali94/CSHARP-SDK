@@ -20,7 +20,7 @@ using Tester.PCL.Models;
 
 namespace Tester.PCL.Controllers
 {
-    public partial class HeaderController: BaseController
+    public partial class HeaderController: BaseController, IHeaderController
     {
         #region Singleton Pattern
 
@@ -69,6 +69,13 @@ namespace Tester.PCL.Controllers
         /// <return>Returns the ServerResponse response from the API call</return>
         public async Task<ServerResponse> SendHeadersAsync(string customHeader, string mvalue)
         {
+            //validating required parameters
+            if (null == customHeader)
+                throw new ArgumentNullException("customHeader", "The parameter \"customHeader\" is a required parameter and cannot be null.");
+
+            if (null == mvalue)
+                throw new ArgumentNullException("mvalue", "The parameter \"mvalue\" is a required parameter and cannot be null.");
+
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -100,6 +107,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 

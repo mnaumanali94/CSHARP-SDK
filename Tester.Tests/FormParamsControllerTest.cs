@@ -26,7 +26,7 @@ namespace Tester.Tests
         /// <summary>
         /// Controller instance (for all tests)
         /// </summary>
-        private static FormParamsController controller;
+        private static IFormParamsController controller;
 
         /// <summary>
         /// Setup test class

@@ -26,7 +26,7 @@ namespace Tester.Tests
         /// <summary>
         /// Controller instance (for all tests)
         /// </summary>
-        private static HeaderController controller;
+        private static IHeaderController controller;
 
         /// <summary>
         /// Setup test class

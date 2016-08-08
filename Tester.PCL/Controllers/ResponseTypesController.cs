@@ -20,7 +20,7 @@ using Tester.PCL.Models;
 
 namespace Tester.PCL.Controllers
 {
-    public partial class ResponseTypesController: BaseController
+    public partial class ResponseTypesController: BaseController, IResponseTypesController
     {
         #region Singleton Pattern
 
@@ -51,10 +51,10 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the long response from the API call</return>
-        public long GetLong()
+        /// <return>Returns the long? response from the API call</return>
+        public long? GetLong()
         {
-            Task<long> t = GetLongAsync();
+            Task<long?> t = GetLongAsync();
             Task.WaitAll(t);
             return t.Result;
         }
@@ -62,8 +62,8 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the long response from the API call</return>
-        public async Task<long> GetLongAsync()
+        /// <return>Returns the long? response from the API call</return>
+        public async Task<long?> GetLongAsync()
         {
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
@@ -88,6 +88,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -142,6 +147,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -203,6 +213,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -219,10 +234,10 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the Days response from the API call</return>
-        public Days GetStringEnum()
+        /// <return>Returns the Days? response from the API call</return>
+        public Days? GetStringEnum()
         {
-            Task<Days> t = GetStringEnumAsync();
+            Task<Days?> t = GetStringEnumAsync();
             Task.WaitAll(t);
             return t.Result;
         }
@@ -230,8 +245,8 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the Days response from the API call</return>
-        public async Task<Days> GetStringEnumAsync()
+        /// <return>Returns the Days? response from the API call</return>
+        public async Task<Days?> GetStringEnumAsync()
         {
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
@@ -262,6 +277,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -322,6 +342,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -338,10 +363,10 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the SuiteCode response from the API call</return>
-        public SuiteCode GetIntEnum()
+        /// <return>Returns the SuiteCode? response from the API call</return>
+        public SuiteCode? GetIntEnum()
         {
-            Task<SuiteCode> t = GetIntEnumAsync();
+            Task<SuiteCode?> t = GetIntEnumAsync();
             Task.WaitAll(t);
             return t.Result;
         }
@@ -349,8 +374,8 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the SuiteCode response from the API call</return>
-        public async Task<SuiteCode> GetIntEnumAsync()
+        /// <return>Returns the SuiteCode? response from the API call</return>
+        public async Task<SuiteCode?> GetIntEnumAsync()
         {
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
@@ -381,6 +406,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -442,6 +472,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -458,10 +493,10 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the double response from the API call</return>
-        public double GetPrecision()
+        /// <return>Returns the double? response from the API call</return>
+        public double? GetPrecision()
         {
-            Task<double> t = GetPrecisionAsync();
+            Task<double?> t = GetPrecisionAsync();
             Task.WaitAll(t);
             return t.Result;
         }
@@ -469,8 +504,8 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the double response from the API call</return>
-        public async Task<double> GetPrecisionAsync()
+        /// <return>Returns the double? response from the API call</return>
+        public async Task<double?> GetPrecisionAsync()
         {
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
@@ -495,6 +530,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -548,6 +588,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpResponse _response = await ClientInstance.ExecuteAsBinaryAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -564,10 +609,10 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// Gets a integer response
         /// </summary>
-        /// <return>Returns the int response from the API call</return>
-        public int GetInteger()
+        /// <return>Returns the int? response from the API call</return>
+        public int? GetInteger()
         {
-            Task<int> t = GetIntegerAsync();
+            Task<int?> t = GetIntegerAsync();
             Task.WaitAll(t);
             return t.Result;
         }
@@ -575,8 +620,8 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// Gets a integer response
         /// </summary>
-        /// <return>Returns the int response from the API call</return>
-        public async Task<int> GetIntegerAsync()
+        /// <return>Returns the int? response from the API call</return>
+        public async Task<int?> GetIntegerAsync()
         {
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
@@ -601,6 +646,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -661,6 +711,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -715,6 +770,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -775,6 +835,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -791,10 +856,10 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the DateTime response from the API call</return>
-        public DateTime GetDatetime()
+        /// <return>Returns the DateTime? response from the API call</return>
+        public DateTime? GetDatetime()
         {
-            Task<DateTime> t = GetDatetimeAsync();
+            Task<DateTime?> t = GetDatetimeAsync();
             Task.WaitAll(t);
             return t.Result;
         }
@@ -802,8 +867,8 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the DateTime response from the API call</return>
-        public async Task<DateTime> GetDatetimeAsync()
+        /// <return>Returns the DateTime? response from the API call</return>
+        public async Task<DateTime?> GetDatetimeAsync()
         {
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
@@ -828,6 +893,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -888,6 +958,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -904,10 +979,10 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the bool response from the API call</return>
-        public bool GetBoolean()
+        /// <return>Returns the bool? response from the API call</return>
+        public bool? GetBoolean()
         {
-            Task<bool> t = GetBooleanAsync();
+            Task<bool?> t = GetBooleanAsync();
             Task.WaitAll(t);
             return t.Result;
         }
@@ -915,8 +990,8 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the bool response from the API call</return>
-        public async Task<bool> GetBooleanAsync()
+        /// <return>Returns the bool? response from the API call</return>
+        public async Task<bool?> GetBooleanAsync()
         {
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
@@ -941,6 +1016,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -1001,6 +1081,11 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
+
+            //return null on 404
+            if (_response.StatusCode == 404)
+                 return null;
+
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
