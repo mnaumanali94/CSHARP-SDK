@@ -13,6 +13,13 @@ installed automatically. Therefore, you will need internet access for build.
     2. Open the solution (*.sln) file.
     3. Invoke the build process using "F6" key or "CTL+LSHIFT+B" shortcut.
 
+How To Test: 
+=============
+The generated SDK also contain one or more Tests, which are contained in the Tests project.
+In order to invoke these test cases, you will need *NUnit 3.0 Test Adapter Extension for Visual Studio*.
+Once the SDK is complied, the test cases should appear in the Test Explorer window.
+Here, you can click *Run All* to execute these test cases.
+
 How To Use:
 ===========
 The build process generates a portable class library, which can be used like
