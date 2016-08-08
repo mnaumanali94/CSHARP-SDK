@@ -10,7 +10,7 @@
     <AssemblyName>Tester.PCL</AssemblyName>
     <OutputType>Library</OutputType>
     <OutputPath>bin/DEBUG/</OutputPath>
-    <ProjectGuid>{0a005eb4-feb2-43de-9b32-599803348049}</ProjectGuid>
+    <ProjectGuid>{518da1d1-82ba-48e2-8f73-cc05c8df0b21}</ProjectGuid>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <NuGetPackageImportStamp>ee2bb91c</NuGetPackageImportStamp>
@@ -81,21 +81,13 @@
     <Compile Include="Models\SuiteCode.cs" />
     <Compile Include="Models\Days.cs" />
     <Compile Include="Controllers\ResponseTypesController.cs" />
-    <Compile Include="Controllers\IResponseTypesController.cs" />
     <Compile Include="Controllers\ErrorCodesController.cs" />
-    <Compile Include="Controllers\IErrorCodesController.cs" />
     <Compile Include="Controllers\BodyParamsController.cs" />
-    <Compile Include="Controllers\IBodyParamsController.cs" />
     <Compile Include="Controllers\FormParamsController.cs" />
-    <Compile Include="Controllers\IFormParamsController.cs" />
     <Compile Include="Controllers\EchoController.cs" />
-    <Compile Include="Controllers\IEchoController.cs" />
     <Compile Include="Controllers\HeaderController.cs" />
-    <Compile Include="Controllers\IHeaderController.cs" />
     <Compile Include="Controllers\QueryParamController.cs" />
-    <Compile Include="Controllers\IQueryParamController.cs" />
     <Compile Include="Controllers\TemplateParamsController.cs" />
-    <Compile Include="Controllers\ITemplateParamsController.cs" />
     <Compile Include="Http\Client\IHTTPClient.cs" />
     <Compile Include="Http\Client\UnirestClient.cs" />
     <Compile Include="Http\Client\HttpEventHandlers.cs" />
@@ -111,7 +103,6 @@
     <Compile Include="Exceptions\APIException.cs" />
     <Compile Include="Models\StringValuedEnumConverter.cs" />
     <Compile Include="TesterClient.cs" />
-    <Compile Include="ITesterClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="Tester.PCL.nuspec">

@@ -26,7 +26,7 @@ namespace Tester.Tests
         /// <summary>
         /// Controller instance (for all tests)
         /// </summary>
-        private static IErrorCodesController controller;
+        private static ErrorCodesController controller;
 
         /// <summary>
         /// Setup test class

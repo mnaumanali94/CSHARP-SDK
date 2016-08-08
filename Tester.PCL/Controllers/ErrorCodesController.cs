@@ -20,7 +20,7 @@ using Tester.PCL.Models;
 
 namespace Tester.PCL.Controllers
 {
-    public partial class ErrorCodesController: BaseController, IErrorCodesController
+    public partial class ErrorCodesController: BaseController
     {
         #region Singleton Pattern
 
@@ -89,11 +89,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -148,11 +143,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 

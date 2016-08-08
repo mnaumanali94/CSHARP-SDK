@@ -26,7 +26,7 @@ namespace Tester.Tests
         /// <summary>
         /// Controller instance (for all tests)
         /// </summary>
-        private static IQueryParamController controller;
+        private static QueryParamController controller;
 
         /// <summary>
         /// Setup test class

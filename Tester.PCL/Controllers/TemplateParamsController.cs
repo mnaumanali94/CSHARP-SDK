@@ -20,7 +20,7 @@ using Tester.PCL.Models;
 
 namespace Tester.PCL.Controllers
 {
-    public partial class TemplateParamsController: BaseController, ITemplateParamsController
+    public partial class TemplateParamsController: BaseController
     {
         #region Singleton Pattern
 
@@ -67,10 +67,6 @@ namespace Tester.PCL.Controllers
         /// <return>Returns the EchoResponse response from the API call</return>
         public async Task<EchoResponse> SendStringArrayAsync(List<string> strings)
         {
-            //validating required parameters
-            if (null == strings)
-                throw new ArgumentNullException("strings", "The parameter \"strings\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -101,11 +97,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -138,10 +129,6 @@ namespace Tester.PCL.Controllers
         /// <return>Returns the EchoResponse response from the API call</return>
         public async Task<EchoResponse> SendIntegerArrayAsync(List<int> integers)
         {
-            //validating required parameters
-            if (null == integers)
-                throw new ArgumentNullException("integers", "The parameter \"integers\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -172,11 +159,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 

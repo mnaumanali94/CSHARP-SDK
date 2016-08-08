@@ -26,7 +26,7 @@ namespace Tester.Tests
         /// <summary>
         /// Controller instance (for all tests)
         /// </summary>
-        private static IEchoController controller;
+        private static EchoController controller;
 
         /// <summary>
         /// Setup test class

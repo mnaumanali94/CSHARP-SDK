@@ -20,7 +20,7 @@ using Tester.PCL.Models;
 
 namespace Tester.PCL.Controllers
 {
-    public partial class QueryParamController: BaseController, IQueryParamController
+    public partial class QueryParamController: BaseController
     {
         #region Singleton Pattern
 
@@ -81,10 +81,6 @@ namespace Tester.PCL.Controllers
                 string mstring,
                 Dictionary<string, object> queryParameters = null)
         {
-            //validating required parameters
-            if (null == mstring)
-                throw new ArgumentNullException("mstring", "The parameter \"mstring\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -120,11 +116,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -179,11 +170,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -216,10 +202,6 @@ namespace Tester.PCL.Controllers
         /// <return>Returns the ServerResponse response from the API call</return>
         public async Task<ServerResponse> StringParamAsync(string mstring)
         {
-            //validating required parameters
-            if (null == mstring)
-                throw new ArgumentNullException("mstring", "The parameter \"mstring\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -250,11 +232,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -287,10 +264,6 @@ namespace Tester.PCL.Controllers
         /// <return>Returns the ServerResponse response from the API call</return>
         public async Task<ServerResponse> UrlParamAsync(string url)
         {
-            //validating required parameters
-            if (null == url)
-                throw new ArgumentNullException("url", "The parameter \"url\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -321,11 +294,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -372,13 +340,6 @@ namespace Tester.PCL.Controllers
                 string mstring,
                 string url)
         {
-            //validating required parameters
-            if (null == mstring)
-                throw new ArgumentNullException("mstring", "The parameter \"mstring\" is a required parameter and cannot be null.");
-
-            if (null == url)
-                throw new ArgumentNullException("url", "The parameter \"url\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -412,11 +373,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -449,10 +405,6 @@ namespace Tester.PCL.Controllers
         /// <return>Returns the ServerResponse response from the API call</return>
         public async Task<ServerResponse> NumberArrayAsync(List<int> integers)
         {
-            //validating required parameters
-            if (null == integers)
-                throw new ArgumentNullException("integers", "The parameter \"integers\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -483,11 +435,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -520,10 +467,6 @@ namespace Tester.PCL.Controllers
         /// <return>Returns the ServerResponse response from the API call</return>
         public async Task<ServerResponse> StringArrayAsync(List<string> strings)
         {
-            //validating required parameters
-            if (null == strings)
-                throw new ArgumentNullException("strings", "The parameter \"strings\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -554,11 +497,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -591,10 +529,6 @@ namespace Tester.PCL.Controllers
         /// <return>Returns the ServerResponse response from the API call</return>
         public async Task<ServerResponse> StringEnumArrayAsync(List<Days> days)
         {
-            //validating required parameters
-            if (null == days)
-                throw new ArgumentNullException("days", "The parameter \"days\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -625,11 +559,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -662,10 +591,6 @@ namespace Tester.PCL.Controllers
         /// <return>Returns the ServerResponse response from the API call</return>
         public async Task<ServerResponse> IntegerEnumArrayAsync(List<SuiteCode> suites)
         {
-            //validating required parameters
-            if (null == suites)
-                throw new ArgumentNullException("suites", "The parameter \"suites\" is a required parameter and cannot be null.");
-
             //the base uri for api requestss
             string _baseUri = Configuration.BaseUri;
 
@@ -696,11 +621,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 

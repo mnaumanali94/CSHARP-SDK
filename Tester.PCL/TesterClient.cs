@@ -9,13 +9,13 @@ using Tester.PCL.Http.Client;
 
 namespace Tester.PCL
 {
-    public partial class TesterClient: ITesterClient
+    public partial class TesterClient
     {
 
         /// <summary>
         /// Singleton access to ResponseTypes controller
         /// </summary>
-        public IResponseTypesController ResponseTypes
+        public ResponseTypesController ResponseTypes
         {
             get
             {
@@ -26,7 +26,7 @@ namespace Tester.PCL
         /// <summary>
         /// Singleton access to ErrorCodes controller
         /// </summary>
-        public IErrorCodesController ErrorCodes
+        public ErrorCodesController ErrorCodes
         {
             get
             {
@@ -37,7 +37,7 @@ namespace Tester.PCL
         /// <summary>
         /// Singleton access to BodyParams controller
         /// </summary>
-        public IBodyParamsController BodyParams
+        public BodyParamsController BodyParams
         {
             get
             {
@@ -48,7 +48,7 @@ namespace Tester.PCL
         /// <summary>
         /// Singleton access to FormParams controller
         /// </summary>
-        public IFormParamsController FormParams
+        public FormParamsController FormParams
         {
             get
             {
@@ -59,7 +59,7 @@ namespace Tester.PCL
         /// <summary>
         /// Singleton access to Echo controller
         /// </summary>
-        public IEchoController Echo
+        public EchoController Echo
         {
             get
             {
@@ -70,7 +70,7 @@ namespace Tester.PCL
         /// <summary>
         /// Singleton access to Header controller
         /// </summary>
-        public IHeaderController Header
+        public HeaderController Header
         {
             get
             {
@@ -81,7 +81,7 @@ namespace Tester.PCL
         /// <summary>
         /// Singleton access to QueryParam controller
         /// </summary>
-        public IQueryParamController QueryParam
+        public QueryParamController QueryParam
         {
             get
             {
@@ -92,7 +92,7 @@ namespace Tester.PCL
         /// <summary>
         /// Singleton access to TemplateParams controller
         /// </summary>
-        public ITemplateParamsController TemplateParams
+        public TemplateParamsController TemplateParams
         {
             get
             {

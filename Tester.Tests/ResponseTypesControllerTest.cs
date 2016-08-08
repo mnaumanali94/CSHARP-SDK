@@ -26,7 +26,7 @@ namespace Tester.Tests
         /// <summary>
         /// Controller instance (for all tests)
         /// </summary>
-        private static IResponseTypesController controller;
+        private static ResponseTypesController controller;
 
         /// <summary>
         /// Setup test class
@@ -46,7 +46,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            long? result = null;
+            long result = 0;
 
             try
             {
@@ -135,7 +135,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            Days? result = null;
+            Days result = 0;
 
             try
             {
@@ -194,7 +194,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            SuiteCode? result = null;
+            SuiteCode result = 0;
 
             try
             {
@@ -253,7 +253,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            double? result = null;
+            double result = 0;
 
             try
             {
@@ -309,7 +309,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            int? result = null;
+            int result = 0;
 
             try
             {
@@ -428,7 +428,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            DateTime? result = null;
+            DateTime result = 0;
 
             try
             {
@@ -487,7 +487,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            bool? result = null;
+            bool result = false;
 
             try
             {
