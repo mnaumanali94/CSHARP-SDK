@@ -2,7 +2,7 @@
 <!--
  - Tester.PCL
  -
- - This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/08/2016
+ - This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/09/2016
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -10,7 +10,7 @@
     <AssemblyName>Tester.PCL</AssemblyName>
     <OutputType>Library</OutputType>
     <OutputPath>bin/DEBUG/</OutputPath>
-    <ProjectGuid>{0a005eb4-feb2-43de-9b32-599803348049}</ProjectGuid>
+    <ProjectGuid>{2c61722c-f6af-47d1-9f47-3bb270affacd}</ProjectGuid>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <NuGetPackageImportStamp>ee2bb91c</NuGetPackageImportStamp>
@@ -73,11 +73,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\SendMixedArrayInput.cs" />
-    <Compile Include="Models\ServerResponse.cs" />
-    <Compile Include="Models\EchoResponse.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EchoResponse.cs" />
+    <Compile Include="Models\SendMixedArrayInput.cs" />
+    <Compile Include="Models\ServerResponse.cs" />
     <Compile Include="Models\SuiteCode.cs" />
     <Compile Include="Models\Days.cs" />
     <Compile Include="Controllers\ResponseTypesController.cs" />

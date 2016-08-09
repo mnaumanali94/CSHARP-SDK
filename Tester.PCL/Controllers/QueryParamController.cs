@@ -1,7 +1,7 @@
 /*
  * Tester.PCL
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/08/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/09/2016
  */
 using System;
 using System.Collections.Generic;
@@ -120,11 +120,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -179,11 +174,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -250,11 +240,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -321,11 +306,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -412,11 +392,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -483,11 +458,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -554,11 +524,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -625,11 +590,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 
@@ -696,11 +656,6 @@ namespace Tester.PCL.Controllers
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request);
             HttpContext _context = new HttpContext(_request,_response);
-
-            //return null on 404
-            if (_response.StatusCode == 404)
-                 return null;
-
             //handle errors defined at the API level
             base.ValidateResponse(_response, _context);
 

@@ -1,7 +1,7 @@
 /*
  * Tester.PCL
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/08/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/09/2016
  */
 using System;
 using System.Collections.Generic;
@@ -23,14 +23,14 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the long? response from the API call</return>
-        long? GetLong();
+        /// <return>Returns the long response from the API call</return>
+        long GetLong();
 
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the long? response from the API call</return>
-        Task<long?> GetLongAsync();
+        /// <return>Returns the long response from the API call</return>
+        Task<long> GetLongAsync();
 
         /// <summary>
         /// TODO: type endpoint description here
@@ -59,14 +59,14 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the Days? response from the API call</return>
-        Days? GetStringEnum();
+        /// <return>Returns the Days response from the API call</return>
+        Days GetStringEnum();
 
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the Days? response from the API call</return>
-        Task<Days?> GetStringEnumAsync();
+        /// <return>Returns the Days response from the API call</return>
+        Task<Days> GetStringEnumAsync();
 
         /// <summary>
         /// TODO: type endpoint description here
@@ -83,14 +83,14 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the SuiteCode? response from the API call</return>
-        SuiteCode? GetIntEnum();
+        /// <return>Returns the SuiteCode response from the API call</return>
+        SuiteCode GetIntEnum();
 
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the SuiteCode? response from the API call</return>
-        Task<SuiteCode?> GetIntEnumAsync();
+        /// <return>Returns the SuiteCode response from the API call</return>
+        Task<SuiteCode> GetIntEnumAsync();
 
         /// <summary>
         /// TODO: type endpoint description here
@@ -107,14 +107,14 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the double? response from the API call</return>
-        double? GetPrecision();
+        /// <return>Returns the double response from the API call</return>
+        double GetPrecision();
 
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the double? response from the API call</return>
-        Task<double?> GetPrecisionAsync();
+        /// <return>Returns the double response from the API call</return>
+        Task<double> GetPrecisionAsync();
 
         /// <summary>
         /// gets a binary object
@@ -131,14 +131,14 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// Gets a integer response
         /// </summary>
-        /// <return>Returns the int? response from the API call</return>
-        int? GetInteger();
+        /// <return>Returns the int response from the API call</return>
+        int GetInteger();
 
         /// <summary>
         /// Gets a integer response
         /// </summary>
-        /// <return>Returns the int? response from the API call</return>
-        Task<int?> GetIntegerAsync();
+        /// <return>Returns the int response from the API call</return>
+        Task<int> GetIntegerAsync();
 
         /// <summary>
         /// Get an array of integers.
@@ -179,14 +179,14 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the DateTime? response from the API call</return>
-        DateTime? GetDatetime();
+        /// <return>Returns the DateTime response from the API call</return>
+        DateTime GetDatetime();
 
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the DateTime? response from the API call</return>
-        Task<DateTime?> GetDatetimeAsync();
+        /// <return>Returns the DateTime response from the API call</return>
+        Task<DateTime> GetDatetimeAsync();
 
         /// <summary>
         /// TODO: type endpoint description here
@@ -203,14 +203,14 @@ namespace Tester.PCL.Controllers
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the bool? response from the API call</return>
-        bool? GetBoolean();
+        /// <return>Returns the bool response from the API call</return>
+        bool GetBoolean();
 
         /// <summary>
         /// TODO: type endpoint description here
         /// </summary>
-        /// <return>Returns the bool? response from the API call</return>
-        Task<bool?> GetBooleanAsync();
+        /// <return>Returns the bool response from the API call</return>
+        Task<bool> GetBooleanAsync();
 
         /// <summary>
         /// TODO: type endpoint description here

@@ -1,7 +1,7 @@
 /*
  * Tester.Tests
  *
- * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/08/2016
+ * This file was automatically generated for Stamplay by APIMATIC v2.0 ( https://apimatic.io ) on 08/09/2016
  */
 using System;
 using System.Collections.Generic;
@@ -46,7 +46,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            long? result = null;
+            long result = 0;
 
             try
             {
@@ -135,7 +135,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            Days? result = null;
+            Days result = 0;
 
             try
             {
@@ -194,7 +194,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            SuiteCode? result = null;
+            SuiteCode result = 0;
 
             try
             {
@@ -253,7 +253,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            double? result = null;
+            double result = 0;
 
             try
             {
@@ -309,7 +309,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            int? result = null;
+            int result = 0;
 
             try
             {
@@ -428,7 +428,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            DateTime? result = null;
+            DateTime result = DateTime.MinValue;
 
             try
             {
@@ -487,7 +487,7 @@ namespace Tester.Tests
         {
 
             // Perform API call
-            bool? result = null;
+            bool result = false;
 
             try
             {
